@@ -51,20 +51,7 @@ class Arr:
 
 class Dict:
 
-		## [b]FP.assignR()[/b][br]
-	## [i]func assign(target : Dictionary , source : Dictionary) -> Dictionary[/i] [br]
-	## Assigns the source dictionary to the target dictionary. Similar to  merge, but returns a new dictionary for immutability[br]
-	## [br]
-	## Examples [br]
-	## [codeblock]
-	## const yedi : Dictionary = { id: 1, age: 100 };
-	##
-	## FP.assignR({ name: 'Yoda', age: 900 }, yedi)
-	## // => { "id": 1, "age": 100, "name": "Yoda" }
-	## [br]
-	## FP.assign({ name: 'Yoda', age: 900 }, yedi)
-	## // => { "id": 1, "age": 900, "name": "Yoda" }
-	## [/codeblock]
+		
 	static func assign(target: Dictionary = {}, source: Dictionary = {},  overwrite: bool = true, duplicate: bool = true, duplicate_deep: bool = true) -> Dictionary:
 		var _target: Dictionary = target.duplicate(duplicate_deep) if duplicate else target
 		_target.merge(source, overwrite)
